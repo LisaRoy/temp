@@ -1,0 +1,222 @@
+14:30:00 [pool-4-thread-1] INFO  bootstrap3Logger  - [启动类bootstrap3]监视器同步商品引导程序开始执行...
+14:30:00 [pool-4-thread-1] DEBUG com.cplatform.SQL  -  SELECT * FROM (SELECT * FROM t_app_item_monitor monitor WHERE monitor.status = 1) WHERE ROWNUM <= ?  [params:100]
+14:30:00 [pool-4-thread-1] INFO  bootstrap3Logger  - [启动类bootstrap3]待执行任务数量为:1
+14:30:00 [pool-4-thread-1] INFO  bootstrap3Logger  - [启动类bootstrap3]开始同步数据...
+14:30:00 [pool-4-thread-1] INFO  bootstrap3Logger  - [启动类bootstrap3]同步数据成功！当前商品id：60137026
+14:30:00 [pool-4-thread-1] INFO  bootstrap3Logger  - [启动类bootstrap3]同步数据完成！开始更新Monitor表数据...
+14:30:00 [pool-4-thread-1] INFO  bootstrap3Logger  - [启动类bootstrap3]更新Monitor表数据完成！
+14:30:00 [pool-4-thread-1] INFO  bootstrap2Logger  - [启动类Bootstrap2]客户端商品详情适配程序开始执行...
+14:30:00 [pool-4-thread-1] INFO  com.cplatform.mall.back.component.impl.ImgTaskCapturableImpl  - task sql--select * from (select task.ID,task.ITEM_ID,task.STATUS,task.CREATE_TIME,task.UPDATE_TIME,task.type,task.is_enforced,sale.remark from T_APP_TASK task ,t_item_sale sale where task.item_id = sale.id and task.STATUS = 1  order by id )  where rownum <= 400
+14:30:00 [pool-4-thread-1] DEBUG com.cplatform.SQL  - select * from (select task.ID,task.ITEM_ID,task.STATUS,task.CREATE_TIME,task.UPDATE_TIME,task.type,task.is_enforced,sale.remark from T_APP_TASK task ,t_item_sale sale where task.item_id = sale.id and task.STATUS = 1  order by id )  where rownum <= 400
+14:30:00 [pool-6-thread-2] ERROR imgProcessTask2Logger  - [任务处理器ImgProcessTask2]当前线程要执行的数量为空，不需要执行。当前线程为:pool-6-thread-2
+14:30:00 [pool-6-thread-1] ERROR imgProcessTask2Logger  - [任务处理器ImgProcessTask2]当前线程要执行的数量为空，不需要执行。当前线程为:pool-6-thread-1
+14:30:00 [pool-6-thread-3] ERROR imgProcessTask2Logger  - [任务处理器ImgProcessTask2]当前线程要执行的数量为空，不需要执行。当前线程为:pool-6-thread-3
+14:30:00 [pool-4-thread-1] INFO  bootstrap2Logger  - [启动类Bootstrap2]线程执行结果：线程名称为 pool-6-thread-1，执行结果为：false
+14:30:00 [pool-4-thread-1] INFO  bootstrap2Logger  - [启动类Bootstrap2]线程执行结果：线程名称为 pool-6-thread-2，执行结果为：false
+14:30:00 [pool-4-thread-1] INFO  bootstrap2Logger  - [启动类Bootstrap2]线程执行结果：线程名称为 pool-6-thread-3，执行结果为：false
+14:30:00 [pool-6-thread-4] INFO  imgProcessTask2Logger  - [任务处理器ImgProcessTask2]线程开始执行，当前执行的数量是：1,当前线程为：pool-6-thread-4
+14:30:00 [pool-6-thread-4] DEBUG imgProcessTask2Logger  - [任务处理器ImgProcessTask2]客户端图片适配准备解析图片,任务ID为6572550,商品ID为60137026
+14:30:00 [pool-6-thread-4] INFO  com.cplatform.mall.back.component.impl.ImgParseComponentImpl  - 解析saleTasks
+14:30:00 [pool-6-thread-4] INFO  com.cplatform.mall.back.component.impl.ImgParseComponentImpl  - http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093452aPqiy.jpg"
+14:30:00 [pool-6-thread-4] INFO  com.cplatform.mall.back.component.impl.ImgParseComponentImpl  - http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093458HAKiI.jpg"
+14:30:00 [pool-6-thread-4] INFO  com.cplatform.mall.back.component.impl.ImgParseComponentImpl  - http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093516TouSr.jpg"
+14:30:00 [pool-6-thread-4] INFO  com.cplatform.mall.back.component.impl.ImgParseComponentImpl  - saleTask item id is 60137026,remark含有3张图片的url
+14:30:00 [pool-6-thread-4] INFO  com.cplatform.mall.back.component.impl.ImgParseComponentImpl  - 解析saleTasks结束
+14:30:00 [pool-6-thread-4] DEBUG imgProcessTask2Logger  - [任务处理器ImgProcessTask2]客户端图片适配准备处理图片,任务ID为6572550,商品ID为60137026
+14:30:00 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.ImgProcessComponentImpl  - 处理图片开始 
+14:30:00 [pool-6-thread-4] DEBUG com.cplatform.SQL  - select ID,ITEM_ID,ORIGINAL_PIC_PATH as picPath ,FILE_ID,PIC_SIZE,STATUS,CREATE_TIME,UPDATE_TIME,TYPE from t_app_pic where status=0 and item_id = ?  and type = ?  [params:60137026, 1]
+14:30:00 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - webpath0/65/1452/N0/
+14:30:00 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - savepath0/65/1452/N0/
+14:30:00 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - filenamep_0651452.jpg-----/data/newmall/gfimg/
+14:30:00 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - realPath -- is/data/newmall/gfimg/0/65/1452/N0/p_0651452.jpgitemId 是60137026
+14:30:00 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - 准备读写文件..
+14:30:00 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destUrl 映射的访问路径 是 http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093458HAKiI.jpg
+14:30:00 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destUrl web的访问路径 是 /data/itemimg/richfiles/2016/05/03/20160503093458HAKiI.jpg
+14:30:00 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destUrl 相对路径 是 /data/newmall/itemimg/richfiles/2016/05/03/20160503093458HAKiI.jpg
+14:30:00 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - 得到文件流，准备写入
+14:30:01 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - write file seccess destFile: /data/newmall/gfimg/0/65/1452/N0/p_0651452.jpg
+14:30:01 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - webPath-----0/65/1452/N0/p_0651452.jpg<--
+14:30:01 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - 查询的图片有没有生成过webPath 是-->0/65/1452/N0/p_0651452.jpg<--,id是131452,itemId 是 60137026
+14:30:01 [pool-6-thread-4] DEBUG com.cplatform.SQL  - select id, file_type, file_web_path, file_name, bs_key, bs_id  from T_SYS_FILE_IMG   where bs_key = ?  and bs_id in (select id from t_app_pic where item_id = ?) and FILE_WEB_PATH = ?  [params:ITEM_REMARK_TIMER_COVER_PIC, 60137026, 0/65/1452/N0/p_0651452.jpg]
+14:30:01 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - id131452webPath is 0/65/1452/N0/p_0651452.jpgitemId is 60137026没有这样的数据
+14:30:01 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - p_0651452.jpg--webFile--------10/65/1452/N1/p_0651452.jpg
+14:30:01 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - Headless mode: true
+14:30:01 [pool-6-thread-4] ERROR com.cplatform.mall.back.service.BsFileService  - HeadlessException:null
+14:30:01 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - absPath: /data/newmall/gfimg/0/65/1452/N0/p_0651452.jpg
+14:30:01 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destFile: /data/newmall/gfimg/0/65/1452/N1/p_0651452.jpg
+14:30:01 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destWidth: 320
+14:30:01 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destHeight: 198
+14:30:01 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - p_0651452.jpg--webFile--------10/65/1452/N2/p_0651452.jpg
+14:30:02 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - Headless mode: true
+14:30:02 [pool-6-thread-4] ERROR com.cplatform.mall.back.service.BsFileService  - HeadlessException:null
+14:30:02 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - absPath: /data/newmall/gfimg/0/65/1452/N0/p_0651452.jpg
+14:30:02 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destFile: /data/newmall/gfimg/0/65/1452/N2/p_0651452.jpg
+14:30:02 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destWidth: 480
+14:30:02 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destHeight: 297
+14:30:02 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - p_0651452.jpg--webFile--------10/65/1452/N3/p_0651452.jpg
+14:30:02 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - Headless mode: true
+14:30:02 [pool-6-thread-4] ERROR com.cplatform.mall.back.service.BsFileService  - HeadlessException:null
+14:30:02 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - absPath: /data/newmall/gfimg/0/65/1452/N0/p_0651452.jpg
+14:30:02 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destFile: /data/newmall/gfimg/0/65/1452/N3/p_0651452.jpg
+14:30:02 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destWidth: 640
+14:30:02 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destHeight: 396
+14:30:02 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - p_0651452.jpg--webFile--------10/65/1452/N4/p_0651452.jpg
+14:30:02 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - Headless mode: true
+14:30:02 [pool-6-thread-4] ERROR com.cplatform.mall.back.service.BsFileService  - HeadlessException:null
+14:30:02 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - absPath: /data/newmall/gfimg/0/65/1452/N0/p_0651452.jpg
+14:30:02 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destFile: /data/newmall/gfimg/0/65/1452/N4/p_0651452.jpg
+14:30:02 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destWidth: 720
+14:30:02 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destHeight: 446
+14:30:02 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - p_0651452.jpg--webFile--------10/65/1452/N5/p_0651452.jpg
+14:30:03 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - Headless mode: true
+14:30:03 [pool-6-thread-4] ERROR com.cplatform.mall.back.service.BsFileService  - HeadlessException:null
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - absPath: /data/newmall/gfimg/0/65/1452/N0/p_0651452.jpg
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destFile: /data/newmall/gfimg/0/65/1452/N5/p_0651452.jpg
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destWidth: 800
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destHeight: 496
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.component.impl.ImgProcessComponentImpl  - 处理图片成功---sysFileImg.getId()---2564089377
+14:30:03 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - webpath0/65/1453/N0/
+14:30:03 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - savepath0/65/1453/N0/
+14:30:03 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - filenamep_0651453.jpg-----/data/newmall/gfimg/
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - realPath -- is/data/newmall/gfimg/0/65/1453/N0/p_0651453.jpgitemId 是60137026
+14:30:03 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - 准备读写文件..
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destUrl 映射的访问路径 是 http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093516TouSr.jpg
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destUrl web的访问路径 是 /data/itemimg/richfiles/2016/05/03/20160503093516TouSr.jpg
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destUrl 相对路径 是 /data/newmall/itemimg/richfiles/2016/05/03/20160503093516TouSr.jpg
+14:30:03 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - 得到文件流，准备写入
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - write file seccess destFile: /data/newmall/gfimg/0/65/1453/N0/p_0651453.jpg
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - webPath-----0/65/1453/N0/p_0651453.jpg<--
+14:30:03 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - 查询的图片有没有生成过webPath 是-->0/65/1453/N0/p_0651453.jpg<--,id是131453,itemId 是 60137026
+14:30:03 [pool-6-thread-4] DEBUG com.cplatform.SQL  - select id, file_type, file_web_path, file_name, bs_key, bs_id  from T_SYS_FILE_IMG   where bs_key = ?  and bs_id in (select id from t_app_pic where item_id = ?) and FILE_WEB_PATH = ?  [params:ITEM_REMARK_TIMER_COVER_PIC, 60137026, 0/65/1453/N0/p_0651453.jpg]
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - id131453webPath is 0/65/1453/N0/p_0651453.jpgitemId is 60137026没有这样的数据
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - p_0651453.jpg--webFile--------10/65/1453/N1/p_0651453.jpg
+14:30:03 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - Headless mode: true
+14:30:03 [pool-6-thread-4] ERROR com.cplatform.mall.back.service.BsFileService  - HeadlessException:null
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - absPath: /data/newmall/gfimg/0/65/1453/N0/p_0651453.jpg
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destFile: /data/newmall/gfimg/0/65/1453/N1/p_0651453.jpg
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destWidth: 320
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destHeight: 240
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - p_0651453.jpg--webFile--------10/65/1453/N2/p_0651453.jpg
+14:30:03 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - Headless mode: true
+14:30:03 [pool-6-thread-4] ERROR com.cplatform.mall.back.service.BsFileService  - HeadlessException:null
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - absPath: /data/newmall/gfimg/0/65/1453/N0/p_0651453.jpg
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destFile: /data/newmall/gfimg/0/65/1453/N2/p_0651453.jpg
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destWidth: 480
+14:30:03 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destHeight: 360
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - p_0651453.jpg--webFile--------10/65/1453/N3/p_0651453.jpg
+14:30:04 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - Headless mode: true
+14:30:04 [pool-6-thread-4] ERROR com.cplatform.mall.back.service.BsFileService  - HeadlessException:null
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - absPath: /data/newmall/gfimg/0/65/1453/N0/p_0651453.jpg
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destFile: /data/newmall/gfimg/0/65/1453/N3/p_0651453.jpg
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destWidth: 640
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destHeight: 480
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - p_0651453.jpg--webFile--------10/65/1453/N4/p_0651453.jpg
+14:30:04 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - Headless mode: true
+14:30:04 [pool-6-thread-4] ERROR com.cplatform.mall.back.service.BsFileService  - HeadlessException:null
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - absPath: /data/newmall/gfimg/0/65/1453/N0/p_0651453.jpg
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destFile: /data/newmall/gfimg/0/65/1453/N4/p_0651453.jpg
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destWidth: 720
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destHeight: 540
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - p_0651453.jpg--webFile--------10/65/1453/N5/p_0651453.jpg
+14:30:04 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - Headless mode: true
+14:30:04 [pool-6-thread-4] ERROR com.cplatform.mall.back.service.BsFileService  - HeadlessException:null
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - absPath: /data/newmall/gfimg/0/65/1453/N0/p_0651453.jpg
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destFile: /data/newmall/gfimg/0/65/1453/N5/p_0651453.jpg
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destWidth: 800
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destHeight: 600
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.component.impl.ImgProcessComponentImpl  - 处理图片成功---sysFileImg.getId()---2564089383
+14:30:04 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - webpath0/65/1454/N0/
+14:30:04 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - savepath0/65/1454/N0/
+14:30:04 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - filenamep_0651454.jpg-----/data/newmall/gfimg/
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - realPath -- is/data/newmall/gfimg/0/65/1454/N0/p_0651454.jpgitemId 是60137026
+14:30:04 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - 准备读写文件..
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destUrl 映射的访问路径 是 http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093452aPqiy.jpg
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destUrl web的访问路径 是 /data/itemimg/richfiles/2016/05/03/20160503093452aPqiy.jpg
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destUrl 相对路径 是 /data/newmall/itemimg/richfiles/2016/05/03/20160503093452aPqiy.jpg
+14:30:04 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - 得到文件流，准备写入
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - write file seccess destFile: /data/newmall/gfimg/0/65/1454/N0/p_0651454.jpg
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - webPath-----0/65/1454/N0/p_0651454.jpg<--
+14:30:04 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - 查询的图片有没有生成过webPath 是-->0/65/1454/N0/p_0651454.jpg<--,id是131454,itemId 是 60137026
+14:30:04 [pool-6-thread-4] DEBUG com.cplatform.SQL  - select id, file_type, file_web_path, file_name, bs_key, bs_id  from T_SYS_FILE_IMG   where bs_key = ?  and bs_id in (select id from t_app_pic where item_id = ?) and FILE_WEB_PATH = ?  [params:ITEM_REMARK_TIMER_COVER_PIC, 60137026, 0/65/1454/N0/p_0651454.jpg]
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - id131454webPath is 0/65/1454/N0/p_0651454.jpgitemId is 60137026没有这样的数据
+14:30:04 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - p_0651454.jpg--webFile--------10/65/1454/N1/p_0651454.jpg
+14:30:05 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - Headless mode: true
+14:30:05 [pool-6-thread-4] ERROR com.cplatform.mall.back.service.BsFileService  - HeadlessException:null
+14:30:05 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - absPath: /data/newmall/gfimg/0/65/1454/N0/p_0651454.jpg
+14:30:05 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destFile: /data/newmall/gfimg/0/65/1454/N1/p_0651454.jpg
+14:30:05 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destWidth: 320
+14:30:05 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destHeight: 531
+14:30:05 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - p_0651454.jpg--webFile--------10/65/1454/N2/p_0651454.jpg
+14:30:05 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - Headless mode: true
+14:30:05 [pool-6-thread-4] ERROR com.cplatform.mall.back.service.BsFileService  - HeadlessException:null
+14:30:05 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - absPath: /data/newmall/gfimg/0/65/1454/N0/p_0651454.jpg
+14:30:05 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destFile: /data/newmall/gfimg/0/65/1454/N2/p_0651454.jpg
+14:30:05 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destWidth: 480
+14:30:05 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destHeight: 796
+14:30:05 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - p_0651454.jpg--webFile--------10/65/1454/N3/p_0651454.jpg
+14:30:05 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - Headless mode: true
+14:30:05 [pool-6-thread-4] ERROR com.cplatform.mall.back.service.BsFileService  - HeadlessException:null
+14:30:05 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - absPath: /data/newmall/gfimg/0/65/1454/N0/p_0651454.jpg
+14:30:05 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destFile: /data/newmall/gfimg/0/65/1454/N3/p_0651454.jpg
+14:30:05 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destWidth: 640
+14:30:05 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destHeight: 1062
+14:30:05 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - p_0651454.jpg--webFile--------10/65/1454/N4/p_0651454.jpg
+14:30:06 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - Headless mode: true
+14:30:06 [pool-6-thread-4] ERROR com.cplatform.mall.back.service.BsFileService  - HeadlessException:null
+14:30:06 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - absPath: /data/newmall/gfimg/0/65/1454/N0/p_0651454.jpg
+14:30:06 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destFile: /data/newmall/gfimg/0/65/1454/N4/p_0651454.jpg
+14:30:06 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destWidth: 720
+14:30:06 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destHeight: 1195
+14:30:06 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - p_0651454.jpg--webFile--------10/65/1454/N5/p_0651454.jpg
+14:30:06 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.BsFileService  - Headless mode: true
+14:30:06 [pool-6-thread-4] ERROR com.cplatform.mall.back.service.BsFileService  - HeadlessException:null
+14:30:06 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - absPath: /data/newmall/gfimg/0/65/1454/N0/p_0651454.jpg
+14:30:06 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destFile: /data/newmall/gfimg/0/65/1454/N5/p_0651454.jpg
+14:30:06 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destWidth: 800
+14:30:06 [pool-6-thread-4] INFO  com.cplatform.mall.back.service.BsFileService  - destHeight: 1328
+14:30:07 [pool-6-thread-4] INFO  com.cplatform.mall.back.component.impl.ImgProcessComponentImpl  - 处理图片成功---sysFileImg.getId()---2564089389
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.ImgProcessComponentImpl  - 处理图片结束 
+14:30:07 [pool-6-thread-4] DEBUG imgProcessTask2Logger  - [任务处理器ImgProcessTask2]客户端图片适配准备生成remark,任务ID为6572550,商品ID为60137026
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - 开始生成remark
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.SQL  - select pic.id,pic.item_id,pic.original_pic_path as picPath, thumb.*  from t_APP_pic pic,t_sys_file_img img,t_sys_file_img_thumb thumb where pic.id=img.bs_id and img.id = thumb.FILE_ID and img.bs_key ='ITEM_REMARK_TIMER_COVER_PIC' and pic.status = 2 and pic.item_id = ? order by pic.item_id, thumb.update_time desc, thumb.img_size    [params:60137026]
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - itemId is 60137026,原路径http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093458HAKiI.jpg,要替换的路径http://image.12580.com/data/gfimg/0/65/1452/N2/p_0651452.jpg
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - itemId is 60137026,原路径http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093516TouSr.jpg,要替换的路径http://image.12580.com/data/gfimg/0/65/1453/N2/p_0651453.jpg
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - itemId is 60137026,原路径http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093452aPqiy.jpg,要替换的路径http://image.12580.com/data/gfimg/0/65/1454/N2/p_0651454.jpg
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - webpath15/68/1026/480/
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - savepath15/68/1026/480/
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - filename15_68_1026.htm-----/data/newmall/app_item_detail/
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - itemId is 60137026,原路径http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093458HAKiI.jpg,要替换的路径http://image.12580.com/data/gfimg/0/65/1452/N3/p_0651452.jpg
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - itemId is 60137026,原路径http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093516TouSr.jpg,要替换的路径http://image.12580.com/data/gfimg/0/65/1453/N3/p_0651453.jpg
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - itemId is 60137026,原路径http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093452aPqiy.jpg,要替换的路径http://image.12580.com/data/gfimg/0/65/1454/N3/p_0651454.jpg
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - webpath15/68/1026/640/
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - savepath15/68/1026/640/
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - filename15_68_1026.htm-----/data/newmall/app_item_detail/
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - itemId is 60137026,原路径http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093458HAKiI.jpg,要替换的路径http://image.12580.com/data/gfimg/0/65/1452/N4/p_0651452.jpg
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - itemId is 60137026,原路径http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093516TouSr.jpg,要替换的路径http://image.12580.com/data/gfimg/0/65/1453/N4/p_0651453.jpg
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - itemId is 60137026,原路径http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093452aPqiy.jpg,要替换的路径http://image.12580.com/data/gfimg/0/65/1454/N4/p_0651454.jpg
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - webpath15/68/1026/720/
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - savepath15/68/1026/720/
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - filename15_68_1026.htm-----/data/newmall/app_item_detail/
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - itemId is 60137026,原路径http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093458HAKiI.jpg,要替换的路径http://image.12580.com/data/gfimg/0/65/1452/N1/p_0651452.jpg
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - itemId is 60137026,原路径http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093516TouSr.jpg,要替换的路径http://image.12580.com/data/gfimg/0/65/1453/N1/p_0651453.jpg
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - itemId is 60137026,原路径http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093452aPqiy.jpg,要替换的路径http://image.12580.com/data/gfimg/0/65/1454/N1/p_0651454.jpg
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - webpath15/68/1026/320/
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - savepath15/68/1026/320/
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - filename15_68_1026.htm-----/data/newmall/app_item_detail/
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - itemId is 60137026,原路径http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093458HAKiI.jpg,要替换的路径http://image.12580.com/data/gfimg/0/65/1452/N5/p_0651452.jpg
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - itemId is 60137026,原路径http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093516TouSr.jpg,要替换的路径http://image.12580.com/data/gfimg/0/65/1453/N5/p_0651453.jpg
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - itemId is 60137026,原路径http://image.12580.com/data/itemimg/richfiles/2016/05/03/20160503093452aPqiy.jpg,要替换的路径http://image.12580.com/data/gfimg/0/65/1454/N5/p_0651454.jpg
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - webpath15/68/1026/800/
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - savepath15/68/1026/800/
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.utils.PathUtil  - filename15_68_1026.htm-----/data/newmall/app_item_detail/
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.component.impl.RemarkGenerateComponentImpl  - 生成remark结束
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.SQL  - select *  from t_app_remark where 1=1  and item_id =?  [params:60137026]
+14:30:07 [pool-6-thread-4] DEBUG com.cplatform.mall.back.service.TaskService  -  task id 6572550task.getItemId() 60137026status is 3
+14:30:07 [pool-6-thread-4] INFO  imgProcessTask2Logger  - [任务处理器ImgProcessTask2]线程执行结束,当前线程为pool-6-thread-4,执行时间为0分钟,执行任务数量为：1
+14:30:07 [pool-4-thread-1] INFO  bootstrap2Logger  - [启动类Bootstrap2]线程执行结果：线程名称为 pool-6-thread-4，执行结果为：true
+14:34:59 [pool-4-thread-1] INFO  bootstrap3Logger  - [启动类bootstrap3]监视器同步商品引导程序开始执行...
+14:34:59 [pool-4-thread-1] DEBUG com.cplatform.SQL  -  SELECT * FROM (SELECT * FROM t_app_item_monitor monitor WHERE monitor.status = 1) WHERE ROWNUM <= ?  [params:100]
+14:35:00 [pool-4-thread-1] INFO  bootstrap3Logger  - [启动类bootstrap3]待执行任务数量为0，当前任务结束。
+14:39:59 [pool-4-thread-1] INFO  bootstrap3Logger  - [启动类bootstrap3]监视器同步商品引导程序开始执行...
+14:39:59 [pool-4-thread-1] DEBUG com.cplatform.SQL  -  SELECT * FROM (SELECT * FROM t_app_item_monitor monitor WHERE monitor.status = 1) WHERE ROWNUM <= ?  [params:100]
+14:39:59 [pool-4-thread-1] INFO  bootstrap3Logger  - [启动类bootstrap3]待执行任务数量为0，当前任务结束。
